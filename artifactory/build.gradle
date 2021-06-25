@@ -60,7 +60,7 @@ allprojects {
 }
 
 artifactory {
-    contextUrl = "${artifactory_contextUrl}"   //The base Artifactory URL if not overridden by the publisher/resolver
+    contextUrl = "https://hamiltonaraujo.jfrog.io/artifactory"   //The base Artifactory URL if not overridden by the publisher/resolver
     publish {
         repository {
             repoKey = 'jenkins-gradle-dev-local'

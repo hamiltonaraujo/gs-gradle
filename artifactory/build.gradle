@@ -47,7 +47,7 @@ publishing {
 buildscript {
     repositories {
         jcenter()
-
+        
     }
     dependencies {
         //Check for the latest version here: http://plugins.gradle.org/plugin/com.jfrog.artifactory
@@ -60,22 +60,23 @@ allprojects {
 }
 
 artifactory {
+    contextUrl = "${artifactory_contextUrl}"   //The base Artifactory URL if not overridden by the publisher/resolver
     publish {
         repository {
-            repoKey = 'gradle-dev-local'
+            repoKey = 'jenkins-gradle-dev-local'
+            username = "${artifactory_user}"
+            password = "${artifactory_password}"
             maven = true
-        }
-        defaults {
-            publications('jar')
-            publishArtifacts = true
-            publishPom = true
+            
         }
     }
     resolve {
         repository {
-            repoKey = 'gradle-dev'
+            repoKey = 'jenkins-gradle-dev'
+            username = "${artifactory_user}"
+            password = "${artifactory_password}"
             maven = true
-
+            
         }
     }
 }

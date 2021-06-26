@@ -62,8 +62,8 @@ artifactory {
     publish {
         repository {
             repoKey = 'jenkins-gradle-dev-local'
-            username = "${artifactory_user}"
-            password = "${artifactory_password}"
+            username = "deploy"
+            password = "CBaud@200"
             maven = true
             
         }
@@ -71,8 +71,8 @@ artifactory {
     resolve {
         repository {
             repoKey = 'jenkins-gradle-dev'
-            username = "${artifactory_user}"
-            password = "${artifactory_password}"
+            username = "deploy"
+            password = "CBaud@2000"
             maven = true
             
         }

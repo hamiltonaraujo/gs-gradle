@@ -65,7 +65,10 @@ artifactory {
             username = "deploy"
             password = "CBaud@200"
             maven = true
-            
+        }
+        defaults {
+            publishBuildInfo = false
+            publications ('mavenJava')
         }
     }
     resolve {

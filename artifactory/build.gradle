@@ -63,7 +63,7 @@ artifactory {
         repository {
             repoKey = 'jenkins-gradle-dev-local'
             username = "deploy"
-            password = "CBaud@200"
+            password = "******"
             maven = true
         }
         defaults {
@@ -75,7 +75,7 @@ artifactory {
         repository {
             repoKey = 'jenkins-gradle-dev'
             username = "deploy"
-            password = "CBaud@2000"
+            password = "******"
             maven = true
             
         }
